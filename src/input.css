@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  margin: 10% auto;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  background-color: #3f2de1;
+  padding: 5px 0;
+}
+.header {
+  font-weight: bold;
+  color: #e1a52d;
+}
+.advice {
+  color: #a0cc00;
+  line-height: 3rem;
+}
+.advice-btn {
+  background: #00b8cc;
+  padding: 10px;
+  border: none;
+  border-radius: 10%;
+  color: #ffd1d1;
+  font-size: 20px;
+}
