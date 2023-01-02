@@ -2,27 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: hsl(218, 23%, 16%);
+  margin: 0 auto;
+}
 .main {
+  border-radius: 4%;
   margin: 10% auto;
   align-items: center;
   text-align: center;
   width: 50%;
-  background-color: #3f2de1;
-  padding: 5px 0;
+  background-color: hsl(217, 19%, 38%);
+  padding: 20px 0;
 }
 .header {
-  font-weight: bold;
-  color: #e1a52d;
+  color: hsl(150, 100%, 66%);
+  font-size: 18px;
 }
 .advice {
-  color: #a0cc00;
+  color: hsl(193, 38%, 86%);
   line-height: 3rem;
+  font-size: 28px;
 }
 .advice-btn {
-  background: #00b8cc;
+  background: hsl(150, 100%, 66%);
   padding: 10px;
   border: none;
-  border-radius: 10%;
-  color: #ffd1d1;
-  font-size: 20px;
+  border-radius: 50%;
+}
+.underline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.line {
+  border-top: 1px solid #fff;
+  width: 20%;
+}
+.line-img {
+  width: 400px;
+  margin: -170px;
+}
+.get-btn {
+  padding: 20px;
+  font-size: 22px;
+  background-color: hsl(150, 100%, 66%);
+  margin: 0;
+  color: #404040;
+  border: none;
+  border-radius: 5%;
 }

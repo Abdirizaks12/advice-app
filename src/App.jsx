@@ -25,18 +25,24 @@ export default function App() {
         <div>
           <h1 className="header"> ADVICE #{advice.id}</h1>
           <h1 className="advice">"{advice.advice}"</h1>
+          <div className="underline">
+            <div className="line"></div>
+            <img className="line-img" src="pattern-divider-desktop.svg" />
+            <div className="line"></div>
+          </div>
         </div>
       ) : (
         []
       )}
 
+      <br />
       {initial == false ? (
-        <button className="advice-btn" onClick={handleChange}>
-          Get advice
+        <button className="get-btn" onClick={handleChange}>
+          GET ADVICE
         </button>
       ) : (
         <button className="advice-btn" onClick={handleChange}>
-          next advice
+          <img src="icon-dice.svg" />
         </button>
       )}
     </div>
