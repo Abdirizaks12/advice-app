@@ -11,17 +11,17 @@ export default function App() {
   //     .then(res=> res.json())
   //     .then(data=> setAdvice(data.slip))
   // },[])
-
-  function handleChange() {
-    fetch('https://api.adviceslip.com/advice')
-      .then((res) => res.json())
-      .then((data) => setAdvice(data.slip));
-
-    setInitial(true);
-  }
+  useEffect(() => {
+    const handleChange = async () => {
+      const idea = await fetch('https://api.adviceslip.com/advice');
+      setAdvice(idea.data.slip);
+    };
+    handleChange();
+  }, []);
+  function handleChange() {}
   return (
     <div className="main">
-      {initial ? (
+      {!initial ? (
         <div>
           <h1 className="header"> ADVICE #{advice.id}</h1>
           <h1 className="advice">"{advice.advice}"</h1>
@@ -36,15 +36,16 @@ export default function App() {
       )}
 
       <br />
-      {initial == false ? (
-        <button className="get-btn" onClick={handleChange}>
-          GET ADVICE
-        </button>
-      ) : (
+      {
+        // initial == false ? (
+        //   <button className="get-btn" onClick={handleChange}>
+        //     GET ADVICE
+        //   </button>
+        // ) : (
         <button className="advice-btn" onClick={handleChange}>
           <img src="icon-dice.svg" />
         </button>
-      )}
+      }
     </div>
   );
 }
